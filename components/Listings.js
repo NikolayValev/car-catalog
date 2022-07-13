@@ -1,11 +1,11 @@
 import ListItem from './ListItem'
 import listingStyles from '../styles/Listing.module.css'
 
-const Listings = ({listings}) => {
+const Listings = ({ listings }) => {
   return (
     <div className={listingStyles.grid}>
-      {listings.map((listing) => (
-        <ListItem listing={listing} />
+      {listings.map((listing, key) => (
+        <ListItem key={key} listing={listing} />
       ))}
     </div>
   )
