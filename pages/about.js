@@ -13,20 +13,10 @@ const about = (mercedes_vehicles) => {
         <title>About</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <button onClick={callAPI}>Make API call</button>
       <DataTable props={mercedes_vehicles}></DataTable>
     </div>
   )
 }
-const callAPI = async () => {
-  try {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/1`);
-    const data = await res.json();
-    console.log(data);
-  } catch (err) {
-    console.log(err);
-  }
-};
 //get the data for the table
 export const getStaticProps = async () => {
   const res = await fetch(`${server}/api/mercedes`)
