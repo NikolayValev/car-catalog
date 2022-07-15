@@ -8,7 +8,7 @@ export default function Home({ listings }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Boat Listings</title>
+        <title>Mercedes Benz</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Listings listings={listings} />
