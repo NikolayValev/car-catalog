@@ -18,7 +18,7 @@ const about = (mercedes_vehicles) => {
   )
 }
 //get the data for the table
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(`${server}/api/mercedes`)
   const mercedes_vehicles = await res.json()
   //console.log(mercedes_vehicles);
