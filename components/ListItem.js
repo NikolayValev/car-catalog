@@ -17,8 +17,6 @@ const ListingItem = ({ listing }) => {
           easing="cubic-bezier(0.7,0,0.6,1)"
           errorIcon={true}
           distance="100px"
-          shift={null}
-          shiftDuration={900}
           bgColor="inherit"
         ></Image>
       </a>

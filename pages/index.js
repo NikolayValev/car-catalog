@@ -15,10 +15,10 @@ export default function Home({ listings }) {
     </div>
   )
 }
-export const getStaticProps = async () => {
+
+export const getServerSideProps = async () => {
   const res = await fetch(`${server}/api/listings`)
   const listings = await res.json()
-
   return {
     props: {
       listings,

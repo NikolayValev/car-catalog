@@ -4,7 +4,8 @@ import ComboBox from '../components/Combobox';
 import CheckboxList from '../components/ListCheckBox'
 import DataTable from '../components/DataTable';
 import styles from '../styles/VehicleTable.module.css'
-import { server } from '../config'
+import clientPromise from "../lib/mongodb";
+//import db from "../mongodb";
 
 const about = (mercedes_vehicles) => {
   return (
@@ -17,8 +18,23 @@ const about = (mercedes_vehicles) => {
     </div>
   )
 }
+export async function getServerSideProps(context) {
+  const client = await clientPromise;
+
+  const db = client.db("MercedesInventory");
+
+  let mercedes_vehicles = await db.collection("Mercedes Models").find({}).toArray();
+  mercedes_vehicles = JSON.parse(JSON.stringify(mercedes_vehicles));
+  //console.log(users);
+  return {
+    props: { mercedes_vehicles },
+  };
+}
 //get the data for the table
-export const getServerSideProps = async () => {
+/*
+export const getStaticProps = async () => {
+  //Lets try to connect to the mongo db
+  //const idk = await getMongoData();
   const res = await fetch(`${server}/api/mercedes`)
   const mercedes_vehicles = await res.json()
   //console.log(mercedes_vehicles);
@@ -29,5 +45,5 @@ export const getServerSideProps = async () => {
     },
   }
 }
-
+*/
 export default about
