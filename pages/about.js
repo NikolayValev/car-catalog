@@ -1,7 +1,4 @@
-import Meta from '../components/Meta'
 import Head from 'next/head'
-import ComboBox from '../components/Combobox';
-import CheckboxList from '../components/ListCheckBox'
 import DataTable from '../components/DataTable';
 import styles from '../styles/VehicleTable.module.css'
 import clientPromise from "../lib/mongodb";
@@ -18,7 +15,7 @@ const about = (mercedes_vehicles) => {
     </div>
   )
 }
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const client = await clientPromise;
 
   const db = client.db("MercedesInventory");

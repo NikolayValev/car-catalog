@@ -1,19 +1,12 @@
 import styles from '../styles/Contact.module.css'
-import Head from 'next/head'
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import Grid from "@mui/material/Grid";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+import Typography from '@mui/material/Typography';
+import phone from '../public/phone.jpg'
+
 export default function Form() {
   const handleSubmit = async (event) => {
     // Stop the form from submitting and refreshing the page.
@@ -51,8 +44,18 @@ export default function Form() {
     alert(`Is this your message: ${result.data}`)
   }
   return (
-    <div className={styles.container}>.
-      <form onSubmit={handleSubmit}>
+    <div className={styles.container}>
+      <Paper className={styles.phoneImage} variant="outlined">
+      </Paper>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.heading}>
+        <Typography variant="h3" component="div" gutterBottom>
+          Contact Us
+        </Typography>
+        <Typography variant="h5" component="div" gutterBottom>
+          Please fill this form in a respectful manner
+        </Typography>
+        </div>
         <Stack
           container
           direction="column"
@@ -75,6 +78,7 @@ export default function Form() {
             id="message"
             label="Your Message"
             placeholder="Placeholder"
+            rows={4}
             multiline
           />
           <Button type="submit" variant="contained">Contained</Button>

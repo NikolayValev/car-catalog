@@ -47,6 +47,15 @@ export const listings = [
       'There are many things to consider when setting up a website, and accessibility is one factor that can sometimes be overlooked. An accessible website is one that’s optimized for all people, including those with impaired vision or hearing, motor difficulties, or learning disabilities',
     picture:
       'https://www.mbusa.com/content/dam/mb-nafta/us/global-header/vehicles/OW-GLOBALNAV-VEHICLEDROPDOWN-COUPE-ECLASS@1.5x.jpg',
+    models: [
+      { id: '31', title: 'CLA Coupe', excerpt: 'Impossible to overlook.', picture: '', },
+      { id: '32', title: 'C-Class Coupe', excerpt: 'Driven by passion. And the passionate.', picture: '', },
+      { id: '33', title: 'E-Class Coupe', excerpt: 'Passionate. Pillarless. Peerless.', picture: '', },
+      { id: '34', title: 'CLS Coupe', excerpt: 'Style you can feel. Charecter you can see.', picture: '', },
+      { id: '35', title: 'Mercedes-AMG GT 4-door Coupe', excerpt: 'Performance never takes a back seat. This time it gives one.', picture: '', },
+      { id: '36', title: 'Mercedes-AMG GT', excerpt: 'The sports car of your dreams. And ours', picture: '', },
+
+    ]
   },
   {
     id: '4',
@@ -57,6 +66,7 @@ export const listings = [
       'We can’t get enough of our mobile apps. There were 204 billion apps downloads last year, and that number is rising in 2020.  When app stores entered the mainstream tech culture, they exposed developers to an audience of millions who were keen to adopt the innovative capabilities',
     picture:
       'https://www.mbusa.com/content/dam/mb-nafta/us/global-header/vehicles/OW-GLOBALNAV-VEHICLEDROPDOWN-CABRIOLETSANDROADSTERS-AMGGT@1.5x.jpg',
+    models: []
   },
   {
     id: '5',
@@ -67,6 +77,9 @@ export const listings = [
       'There are many things to consider when setting up a website, and accessibility is one factor that can sometimes be overlooked. An accessible website is one that’s optimized for all people, including those with impaired vision or hearing, motor difficulties, or learning disabilities',
     picture:
       'https://www.mbusa.com/content/dam/mb-nafta/us/global-header/vehicles/OW-GLOBALNAV-VEHICLEDROPDOWN-EQS@1.5x.jpg',
+    models: [
+      { id: '24', title: 'EQS Sedan', excerpt: 'More than a new era of motoring, it\'s the new flagship of the electric fleet.The EQS is here to make every day a fresh start for your own future.', picture: '', model: 'EQS Sedan' },
+    ]
   },
   {
     id: '6',
@@ -77,5 +90,6 @@ export const listings = [
       'We can’t get enough of our mobile apps. There were 204 billion apps downloads last year, and that number is rising in 2020.  When app stores entered the mainstream tech culture, they exposed developers to an audience of millions who were keen to adopt the innovative capabilities',
     picture:
       'https://www.mbusa.com/content/dam/mb-nafta/us/global-header/2023-VISION-AMG-MASTER.jpg',
+    models: []
   },
 ]
