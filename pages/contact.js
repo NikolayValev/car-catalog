@@ -41,12 +41,10 @@ export default function Form() {
     // Get the response data from server as JSON.
     // If server returns the name submitted, that means the form works.
     const result = await response.json()
-    alert(`Is this your message: ${result.data}`)
+    //alert(`Is this your message: ${result.data}`)
   }
   return (
     <div className={styles.container}>
-      <Paper className={styles.phoneImage} variant="outlined">
-      </Paper>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.heading}>
         <Typography variant="h3" component="div" gutterBottom>
@@ -81,7 +79,7 @@ export default function Form() {
             rows={4}
             multiline
           />
-          <Button type="submit" variant="contained">Contained</Button>
+          <Button type="submit" variant="contained">Submit</Button>
         </Stack>
       </form>
     </div>

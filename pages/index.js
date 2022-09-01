@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Listings from '../components/Listings'
+import Listings from '../components/Listings/Listings'
 import { server } from '../config'
 import styles from '../styles/Home.module.css'
 

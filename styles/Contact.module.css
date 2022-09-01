@@ -10,17 +10,11 @@
   background: lightgray;
   align-items: flex-start
 }
-.phoneImage{
-  height:33rem;
-  width: 300px;
-  background-image: url(../public/phone.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .form{
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 1em;
+  margin-bottom: 5em;
   background-color: white;
   padding: 12px; /* Some padding */
   border: 1px solid #ccc; /* Gray border */
@@ -32,4 +26,8 @@
   margin-bottom: 10px;
   padding: 10px;
   background: lightgray;
+}
+.heading.div{
+  justify-content: center;
+  align-items: center;
 }

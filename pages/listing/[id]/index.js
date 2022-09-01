@@ -2,7 +2,7 @@ import { server } from '../../../config'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Meta from '../../../components/Meta'
-import Listings from '../../../components/Listings'
+import Listings from '../../../components/Listings/Listings'
 const listing = ({ listing }) => {
   // const router = useRouter()
   // const { id } = router.query

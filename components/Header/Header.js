@@ -1,5 +1,5 @@
-import headerStyles from '../styles/Header.module.css'
-
+import headerStyles from './Header.module.css'
+ 
 const Header = () => {
   return (
     <div className={headerStyles.container}>

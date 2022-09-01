@@ -48,7 +48,10 @@ const columns = [{
 ];
 
 
-
+/*
+//Loading all of the data is expensive.
+// https://mui.com/x/react-data-grid/pagination/
+*/
 export default function DataGridDemo({
   props
 }) {

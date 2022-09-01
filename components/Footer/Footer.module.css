@@ -1,0 +1,23 @@
+.container {
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6));
+	background-size: cover;
+  height: inherit;
+  width: inherit;
+	min-height:50px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+}
+.copyrights {
+  padding-left: 5%;
+}
+.nav ul {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  list-style: none;
+}
+.nav li a {
+  margin: 5px 15px;
+}

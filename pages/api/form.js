@@ -1,4 +1,6 @@
-export default function handler(req, res) {
+import clientPromise from "../../lib/mongodb";
+
+export default async function handler(req, res) {
   // Get data submitted in request's body.
   const body = req.body
 
@@ -12,8 +14,16 @@ export default function handler(req, res) {
     // Sends a HTTP bad request error code
     return res.status(400).json({ data: 'Some part of the form is not found!' })
   }
-
   // Found the name.
+  //now Push it to the db
+  const client = await clientPromise;
+  const db = client.db("MercedesInventory");
+  const coll = db.collection("ContactForms");
+  try {
+    coll.insertOne(body);
+  } catch (e) {
+    print(e);
+  };
   // Sends a HTTP success code
   res.status(200).json({ data: `${body.name} ${body.email} ${body.subject} ${body.message}` })
 }

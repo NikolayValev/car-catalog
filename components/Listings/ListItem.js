@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import listingStyles from '../styles/Listing.module.css'
+import listingStyles from './Listing.module.css'
 import Image from 'mui-image'
 
 const ListingItem = ({ listing }) => {
