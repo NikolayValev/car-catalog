@@ -2,7 +2,7 @@ import Head from 'next/head'
 import DataTable from '../components/DataTable';
 import styles from '../styles/VehicleTable.module.css'
 import clientPromise from "../lib/mongodb";
-//import db from "../mongodb";
+import { server } from '../config'
 
 const about = (mercedes_vehicles) => {
   return (
@@ -15,6 +15,7 @@ const about = (mercedes_vehicles) => {
     </div>
   )
 }
+///*
 export async function getStaticProps(context) {
   const client = await clientPromise;
 
@@ -27,6 +28,7 @@ export async function getStaticProps(context) {
     props: { mercedes_vehicles },
   };
 }
+//*/
 //get the data for the table
 /*
 export const getStaticProps = async () => {

@@ -8,7 +8,7 @@ const  Footer = () => {
   return (
     <div className={FooterStyles.container}>
       <nav className={FooterStyles.nav}>
-        <Typography variant="h7" component="div" lassName={FooterStyles.copyrights}>
+        <Typography variant="h7" component="div" className={FooterStyles.copyrights}>
           &copy; 2022 Cars for everyone.
         </Typography>
         <ul>

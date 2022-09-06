@@ -52,12 +52,12 @@ const columns = [{
 //Loading all of the data is expensive.
 // https://mui.com/x/react-data-grid/pagination/
 */
-export default function DataGridDemo({
-  props
-}) {
-  //console.log(props.mercedes_vehicles[0])
-  //*
+export default function DataGridDemo({props}) {
+  const [page, setPage] = React.useState(0);
+  const [pageSize, setPageSize] = React.useState(5);
   let rows = [];
+  let rowCount = 10
+  //map the props to the the row items
   props.mercedes_vehicles.map(({
     vehicleSortId,
     name,
@@ -81,29 +81,31 @@ export default function DataGridDemo({
       netPrice: `${netPrice}`
     })
   })
-  //*/
-  return (<
-    Box sx={
-      {
-        height: 600,
-        width: '100%'
-      }
-    } >
+  //State
+  const [rowCountState, setRowCountState] = React.useState(rowCount);
+  React.useEffect(() => {
+    setRowCountState((prevRowCountState) =>
+      rowCount !== undefined ? rowCount : prevRowCountState,
+    );
+  }, [rowCount, setRowCountState]);
+
+  return (
     <
-      DataGrid rows={
-        rows
+      DataGrid
+      sx={
+        {
+          hight: '100%',
+          width: '100%'
+        }
       }
-      columns={
-        columns
-      }
-      pageSize={
-        10
-      }
-      rowsPerPageOptions={
-        [5]
-      }
+      rows={rows}
+      columns={columns}
+      pageSize={10}
+      rowsPerPageOptions={[5]}
+      rowCount={rowCountState}
+      paginationMode="server"
+      onPageChange={(newPage) => setPage(newPage)}
       checkboxSelection disableSelectionOnClick /
     >
-  </Box>
   );
 }

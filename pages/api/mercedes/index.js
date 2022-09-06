@@ -1,6 +1,4 @@
 //import { mercAPIKey } from '../../config'
-/*
-import { listings } from '../../../data'
 import clientPromise from "../../../lib/mongodb";
 export default async function handler(req, res) {
   const client = await clientPromise;
@@ -12,7 +10,7 @@ export default async function handler(req, res) {
     props: { models },
   };
 }
-*/
+
 /*
 export default async function handler(req, res) {
   let mercAPIKey = `a5255383-8a82-433a-826d-d10d0e6e41a6`

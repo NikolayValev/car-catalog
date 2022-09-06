@@ -8,7 +8,10 @@ const Nav = () => {
           <Link href='/'>Home</Link>
         </li>
         <li>
-          <Link href='/about'>Inventory</Link>
+          <Link href='/about'>New Mercedes Vehicles</Link>
+        </li>
+        <li>
+          <Link href='/usedCars'>Used Cars</Link>
         </li>
         <li>
           <Link href='/contact'>Get in touch</Link>
