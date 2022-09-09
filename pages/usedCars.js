@@ -5,8 +5,29 @@ import {
 } from "@mui/material";
 import ChipSelect from '../components/ChipSelect';
 import { server } from '../config'
+import { DoNotDisturbOnTotalSilenceRounded } from '@mui/icons-material';
 //import clientPromise from "../lib/mongodb";
 export default function Used({ descriptions }) {
+  const currentState={
+    loading:true,
+    post:{},
+    error:{}
+  }
+  const payloadReducer =(state,action)=>{
+    if(action.type==="START"){
+      return {
+        loading:DoNotDisturbOnTotalSilenceRounded,
+        error:false,
+        post:{},
+      };
+    }
+    else if (action.type === "SUCCESS"){
+
+    }
+    else if (action.type === "ERROR") {
+
+    }
+  }
   return (
     <div className={styles.container}>
       <Head>
